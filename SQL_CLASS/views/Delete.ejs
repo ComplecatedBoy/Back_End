@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("Head.ejs") %>
+  <body>
+    <h1>Delete The User: <span style="font-weight: 400; color: rgb(39, 9, 210)"><%= user.email %></span></h1>
+    <form action="http://localhost:8080/user/<%= user.id %>?_method=DELETE" method="post">
+      <input type="password" name="password" id="password" placeholder="Enter password"/>
+      <input type="submit" value="Done!" class="edit_btn">
+    </form>
+  </body>
+</html>

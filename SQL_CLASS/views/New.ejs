@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("Head.ejs") %>
+  <body>
+    <h2>Add a new User</h2>
+    <form action="/user" method="post">
+        <input type="email" name="email" id="email" placeholder="email">
+        <br>
+        <input type="text" name="username" id="username"placeholder="Enter Username">
+        <br>
+        <input type="password" name="password" id="password" placeholder="Enter password">
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+  </body>
+</html>

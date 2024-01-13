@@ -1,0 +1,16 @@
+<%-include("includes/head.ejs")%>
+<body>
+    <h2>This page belongs to @<%= user.name %></h2>
+    <button type="button">Follow</button>
+    <button type="button">Message</button>
+    <p>Following: <%=user.followers%>&nbsp;&nbsp;&nbsp;&nbsp;Following: <%= user.following%></p>
+    <hr>
+    <h3>Post That you want to See:</h3>
+    <% for(post of user.posts) {%>
+     <img src="<%=post.image %>" alt="" srcset="">
+     <p><b>Likes: <%=post.likes %></b>&nbsp;&nbsp;&nbsp;<b>Comments: <%=post.comments%></b></p>
+    <% } %>
+    <%- include("includes/footer.ejs") %>
+</body>
+<script src="/app.js"></script>
+</html>

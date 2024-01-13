@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("Head.ejs") %>
+  <body>
+    <h2 style="font-weight: 400;">You are about to Edit UserName: <span style="font-weight: 600;"><%= user.email %></span></h2>
+    <form action="http://localhost:8080/user/<%= user.id %>?_method=PATCH" method="post">
+      <input type="text" name="newUserName" id="newUserName" Value="<%= user.username %>" />
+      <input type="password" name="password" id="password" placeholder="Enter password"/>
+      <input type="submit" value="Done!" class="edit_btn">
+    </form>
+  </body>
+</html>
